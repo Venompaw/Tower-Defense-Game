@@ -1,0 +1,2 @@
+C:\Users\Andrew\Documents\GitHub\Tower-Defense-Game\TDProj\TDProj\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\Tower-Defense-Game\TDProj\TDProj\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
