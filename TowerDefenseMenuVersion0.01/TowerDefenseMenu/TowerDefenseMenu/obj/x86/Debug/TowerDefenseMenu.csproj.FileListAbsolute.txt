@@ -1,0 +1,7 @@
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\bin\x86\Debug\TowerDefenseMenu.exe
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\bin\x86\Debug\TowerDefenseMenu.pdb
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\obj\x86\Debug\TowerDefenseMenu.csprojResolveAssemblyReference.cache
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\obj\x86\Debug\TowerDefenseMenu.exe
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\obj\x86\Debug\TowerDefenseMenu.pdb
+H:\COMP231\TowerDefenseMenu\TowerDefenseMenu\TowerDefenseMenu\bin\x86\Debug\Content\Difficulty.xnb
