@@ -1,9 +1,0 @@
-H:\COMP231\GameMenu\GameMenu\GameMenu\bin\x86\Debug\GameMenu.exe
-H:\COMP231\GameMenu\GameMenu\GameMenu\bin\x86\Debug\GameMenu.pdb
-H:\COMP231\GameMenu\GameMenu\GameMenu\obj\x86\Debug\GameMenu.csprojResolveAssemblyReference.cache
-H:\COMP231\GameMenu\GameMenu\GameMenu\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-H:\COMP231\GameMenu\GameMenu\GameMenu\obj\x86\Debug\GameMenu.exe
-H:\COMP231\GameMenu\GameMenu\GameMenu\obj\x86\Debug\GameMenu.pdb
-H:\COMP231\GameMenu\GameMenu\GameMenu\bin\x86\Debug\Content\Images\Difficulty.xnb
-H:\COMP231\GameMenu\GameMenu\GameMenu\bin\x86\Debug\Content\Images\map.xnb
-H:\COMP231\GameMenu\GameMenu\GameMenu\bin\x86\Debug\Content\Images\redbox.xnb
