@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{271F9B37-3492-C60F-1E39-31CBE6CA54C3}</ProjectGuid>
+	<ProjectGuid>{57303AF7-2C1D-0AE3-A0F6-6B93A369D721}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -56,7 +56,7 @@
      <Compile Include="Assets\Scripts\RestartLevel.cs" />
      <Compile Include="Assets\Scripts\ReturnMenu.cs" />
      <Compile Include="Assets\Scripts\ScoreBehaviour.cs" />
-     <Compile Include="Assets\Scripts\SpawnScriptTest.cs" />
+     <Compile Include="Assets\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\Scripts\StartRoundGUI.cs" />
      <Compile Include="Assets\Scripts\TowerScript.cs" />
      <Compile Include="Assets\Scripts\TowerSpawnScript.cs" />

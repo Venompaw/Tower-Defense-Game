@@ -28,7 +28,7 @@ public class TowerScript : MonoBehaviour {
 			{
 				GameObject bulletObject = Instantiate(prefab, transform.position,Quaternion.identity) as GameObject;
 				bulletObject.SendMessage("TestMethod", hitColliders[i].gameObject);
-				audio.Play();
+				//audio.Play();
 				bulletName++;
 				isActive++;	
 			}
