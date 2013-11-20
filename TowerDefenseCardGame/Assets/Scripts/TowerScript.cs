@@ -1,48 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
-/*
-This script is attached to a part of the tower, to determine it's spawn location
 
-
-*/
 public class TowerScript : MonoBehaviour {
 	public object creep;
 	public GameObject prefab;
-	public Transform bullet;
-	public int bulletName = 0;
-	private float fireSpeed; //This needs to change depending on the tower type, in seconds
-	//private Hashtable creepHash = new Hashtable();
-	private float isActive;
-	private bool fireActive = false;
+	public Transform bullet; 
+	public int bulletName;
+	private float fireSpeed; //The time between each tower firing, in seconds
+	private float isActive; //When equal to fireSpeed, resets and allows the tower to fire again
+	private bool fireActive; //Stops the tower from firing until placed
+	
+	
 	// Use this for initialization
 	void Start () {
-		//prefab =  Resources.Load ("Sphere") as GameObject;
+		bulletName = 0;
+		fireActive = false;
 		fireSpeed = 2;
 		isActive = 0;
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
 		Collider[] hitColliders = Physics.OverlapSphere(transform.position, 4);
 		
         int i = 0;
         while (i < hitColliders.Length) {
-			
 			if (isActive == 0 && fireActive == true)
 			{
-				//Send the gameObject, rather than name
-				GameObject myObject = Instantiate(prefab, transform.position,Quaternion.identity) as GameObject;
-				myObject.SendMessage("TestMethod", hitColliders[i].gameObject);
+				GameObject bulletObject = Instantiate(prefab, transform.position,Quaternion.identity) as GameObject;
+				bulletObject.SendMessage("TestMethod", hitColliders[i].gameObject);
 				audio.Play();
 				bulletName++;
-				isActive++;
-				
-				
-				
+				isActive++;	
 			}
-			
-			
-			//test1.transform.position = new Vector3(test1.transform.position.x + 1, test1.transform.position.y, test1.transform.position.z);
             i++;
         }
 		if (isActive != 0)
@@ -52,7 +41,6 @@ public class TowerScript : MonoBehaviour {
 				else
 					isActive += Time.deltaTime;
 			}
-		
 	}
 	
 	public void DestroyTower()
@@ -65,8 +53,25 @@ public class TowerScript : MonoBehaviour {
 		objectPos.y = 2.0f;
 		transform.position = objectPos;
 	}
+	
 	public void FireActive()
 	{
 		fireActive = !fireActive;
+	}
+	
+	public void TowerType(string towerType)
+	{
+		switch (towerType)
+		{	
+		case "ArcherTower":
+			fireSpeed = 2f;
+			break;
+		case "ArrowCart":
+			fireSpeed = 1f;
+			break;
+		case "Ballista":
+			fireSpeed = 2.2f;
+			break;
+		}
 	}
 }
