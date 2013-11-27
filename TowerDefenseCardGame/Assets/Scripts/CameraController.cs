@@ -56,117 +56,29 @@ public class CameraController : MonoBehaviour
 			down = false;
 		}
 		
-		if (left && !ToFarLeft())
+		if (left && transform.position.x >= -42)
 		{
 			Vector3 position = transform.position;
-			position.x = transform.position.x + (float)(0.1*(Math.Sin(transform.rotation.y)-1));
-			position.z = transform.position.z + (float)(0.1*(Math.Cos(transform.rotation.y)-1));
+			position.x = transform.position.x - 0.1f;
 			transform.position = position;
 		}
-		if (right && !ToFarRight())
+		if (right && transform.position.x <= 42)
 		{
 			Vector3 position = transform.position;
-			position.x = transform.position.x - (float)(0.1*(Math.Sin(transform.rotation.y)-1));
-			position.z = transform.position.z - (float)(0.1*(Math.Cos(transform.rotation.y)-1));
+			position.x = transform.position.x + 0.1f;
 			transform.position = position;
 		}
-		if (up && !ToFarUp())
+		if (up && transform.position.z <= 42)
 		{
 			Vector3 position = transform.position;
-			position.x = transform.position.x - (float)(0.1*(Math.Cos(transform.rotation.y)-1));
-			position.z = transform.position.z - (float)(0.1*(Math.Sin(transform.rotation.y)-1));
+			position.z = transform.position.z + 0.1f;
 			transform.position = position;
 		}
-		if (down && !ToFarDown())
+		if (down && transform.position.z >= -42)
 		{
 			Vector3 position = transform.position;
-			position.x = transform.position.x + (float)(0.1*(Math.Cos(transform.rotation.y)-1));
-			position.z = transform.position.z + (float)(0.1*(Math.Sin(transform.rotation.y)-1));
+			position.z = transform.position.z - 0.1f;
 			transform.position = position;
 		}
-	}
-	
-	bool ToFarLeft()
-	{
-		if ((int)Math.Cos(transform.rotation.y) == 1 && transform.position.x <= -22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Cos(transform.rotation.y) == -1 && transform.position.x >= 22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == 1 && transform.position.z >= 22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == -1 && transform.position.z <= -22.5)
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	bool ToFarRight()
-	{
-		if ((int)Math.Cos(transform.rotation.y) == 1 && transform.position.x >= 22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Cos(transform.rotation.y) == -1 && transform.position.x <= -22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == 1 && transform.position.z <= -22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == -1 && transform.position.z >= 22.5)
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	bool ToFarUp()
-	{
-		if ((int)Math.Cos(transform.rotation.y) == 1 && transform.position.z >= 22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Cos(transform.rotation.y) == -1 && transform.position.z <= -22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == 1 && transform.position.x >= 22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == -1 && transform.position.x <= -22.5)
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	bool ToFarDown()
-	{
-		if ((int)Math.Cos(transform.rotation.y) == 1 && transform.position.z <= -22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Cos(transform.rotation.y) == -1 && transform.position.z >= 22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == 1 && transform.position.x <= -22.5)
-		{
-			return true;
-		}
-		if ((int)Math.Sin(transform.rotation.y) == -1 && transform.position.x >= 22.5)
-		{
-			return true;
-		}
-		return false;
 	}
 }
