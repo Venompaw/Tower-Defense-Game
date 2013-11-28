@@ -53,13 +53,14 @@
      <Compile Include="Assets\Scripts\GameMenu.cs" />
      <Compile Include="Assets\Scripts\GoldBehaviour.cs" />
      <Compile Include="Assets\Scripts\HPBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\PlaceableTower.cs" />
      <Compile Include="Assets\Scripts\RestartLevel.cs" />
      <Compile Include="Assets\Scripts\ReturnMenu.cs" />
      <Compile Include="Assets\Scripts\ScoreBehaviour.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\Scripts\StartRoundGUI.cs" />
-     <Compile Include="Assets\Scripts\TowerScript.cs" />
-     <Compile Include="Assets\Scripts\TowerSpawnScript.cs" />
+     <Compile Include="Assets\Scripts\TowerManager.cs" />
+     <Compile Include="Assets\Scripts\TowerPlacement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
