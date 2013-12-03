@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\GameIntro.cs" />
      <Compile Include="Assets\Scripts\GameMenu.cs" />
      <Compile Include="Assets\Scripts\GoldBehaviour.cs" />
+     <Compile Include="Assets\Scripts\GridPlacement.cs" />
      <Compile Include="Assets\Scripts\HPBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\PlaceableTower.cs" />
      <Compile Include="Assets\Scripts\RestartLevel.cs" />

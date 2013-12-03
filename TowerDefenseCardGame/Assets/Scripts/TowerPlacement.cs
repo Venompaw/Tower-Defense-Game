@@ -6,6 +6,8 @@ public class TowerPlacement : MonoBehaviour {
 	private PlaceableTower placeableTower;
 	private Transform currentTower;
 	private bool hasPlaced;
+	public GameObject grid;
+	private bool gridFull;
 	
 	public LayerMask towersMask;
 	
@@ -17,7 +19,7 @@ public class TowerPlacement : MonoBehaviour {
 		Vector3 m = Input.mousePosition;
 		m = new Vector3(m.x,m.y,transform.position.y);
 		Vector3 p = camera.ScreenToWorldPoint(m);
-
+		
 		if (currentTower != null && !hasPlaced) {
 			
 			currentTower.position = new Vector3(p.x,0,p.z);
@@ -29,6 +31,7 @@ public class TowerPlacement : MonoBehaviour {
 			}
 		}
 		else {
+			/*
 			if (Input.GetMouseButtonDown(0)) {
 				RaycastHit hit = new RaycastHit();
 				Ray ray = new Ray(new Vector3(p.x,8,p.z), Vector3.down);
@@ -44,13 +47,13 @@ public class TowerPlacement : MonoBehaviour {
 						placeableTowerOld.SetSelected(false);
 					}
 				}
-			}
+			} */
 		}
 	}
 
 
 	bool IsLegalPosition() {
-		if (placeableTower.colliders.Count> 0) {
+		if (placeableTower.colliders.Count> 0 || gridFull) {
 			return false;	
 		}
 		return true;
@@ -60,5 +63,11 @@ public class TowerPlacement : MonoBehaviour {
 		hasPlaced = false;
 		currentTower = ((GameObject)Instantiate(b)).transform;
 		placeableTower = currentTower.GetComponent<PlaceableTower>();
+		grid.BroadcastMessage("SetTower", currentTower);
+	}
+	
+	public void SetGridFull(bool a)
+	{
+		gridFull = a;
 	}
 }
