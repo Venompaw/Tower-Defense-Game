@@ -44,6 +44,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ArrowCartScript.cs" />
+     <Compile Include="Assets\Scripts\BallistaScript.cs" />
      <Compile Include="Assets\Scripts\BulletMoveScript.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CreepController.cs" />
@@ -62,6 +64,7 @@
      <Compile Include="Assets\Scripts\StartRoundGUI.cs" />
      <Compile Include="Assets\Scripts\TowerManager.cs" />
      <Compile Include="Assets\Scripts\TowerPlacement.cs" />
+     <Compile Include="Assets\Scripts\TowerScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
