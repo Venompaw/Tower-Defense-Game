@@ -6,14 +6,12 @@ public class BulletMoveScript : MonoBehaviour {
 	//private string creepID;
 	public GUIText guiText;
 	private GameObject creepObject;
+	private float damage;
+	//public ParticleSystem particleSystem;
 	// Use this for initialization
 	void Start () {
-		
-		/*   B instanceOfB = GameObject.Find("Name of GameObject to which B is attached").GetComponent<B>();
-        		instanceOfB.printStuff("this is b's method");
-   				 }
-					
-					*/
+		//transform.position = new Vector3(transform.position.x, creepObject.transform.position.y, transform.position.z);
+		//damage = 50.0f;//In case of errors, will stop from being null
 	}
 	
 	// Update is called once per frame
@@ -22,12 +20,16 @@ public class BulletMoveScript : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
+		
+		transform.LookAt(new Vector3(creepObject.transform.position.x, creepObject.transform.position.y, creepObject.transform.position.z));
+		transform.Rotate(0, 90, 90);
+			
 		transform.position = Vector3.MoveTowards(transform.position, creepObject.transform.position, 
-			5.0f * Time.deltaTime);
+			12.0f * Time.deltaTime);
 		
 		if(transform.position == creepObject.transform.position)
 		{
-			creepObject.SendMessage("ApplyDamage", 1.0f);
+			creepObject.SendMessage("ApplyDamage", damage);
 			Destroy(gameObject);
 		}
 		
@@ -38,5 +40,10 @@ public class BulletMoveScript : MonoBehaviour {
 	public void TestMethod(GameObject creepObject)
 	{	//Accept a gameObject
 		this.creepObject = creepObject;
+	}
+	
+	public void DamageMethod(float damage)
+	{
+		this.damage = damage;
 	}
 }
